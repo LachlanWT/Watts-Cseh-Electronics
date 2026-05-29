@@ -1,0 +1,114 @@
+# =============================================================
+#  .gitattributes — Circuit / CAD / PCB Repository
+# =============================================================
+
+# Default: auto-detect text files and normalize line endings
+* text=auto
+
+
+# -------------------------------------------------------------
+#  LTspice
+# -------------------------------------------------------------
+*.asc   text eol=lf
+*.asy   text eol=lf
+*.raw   binary
+*.op    binary
+
+
+# -------------------------------------------------------------
+#  KiCad
+# -------------------------------------------------------------
+*.kicad_pcb     text eol=lf
+*.kicad_sch     text eol=lf
+*.kicad_pro     text eol=lf
+*.kicad_mod     text eol=lf
+*.kicad_sym     text eol=lf
+*.kicad_wks     text eol=lf
+
+# KiCad binary/cache files
+*.kicad_dru     binary
+fp-lib-table    text eol=lf
+sym-lib-table   text eol=lf
+
+
+# -------------------------------------------------------------
+#  Gerbers & Fabrication outputs
+# -------------------------------------------------------------
+*.gbr   text eol=lf
+*.gtl   text eol=lf
+*.gbl   text eol=lf
+*.gts   text eol=lf
+*.gbs   text eol=lf
+*.gto   text eol=lf
+*.gbo   text eol=lf
+*.gm1   text eol=lf
+*.drl   text eol=lf
+*.exc   text eol=lf
+*.xln   text eol=lf
+
+
+# -------------------------------------------------------------
+#  Onshape exports (Onshape is cloud-native; these are exports)
+# -------------------------------------------------------------
+*.step  binary
+*.stp   binary
+*.iges  binary
+*.igs   binary
+*.sat   binary
+*.x_t   binary
+*.x_b   binary
+*.parasolid binary
+
+
+# -------------------------------------------------------------
+#  3D Printing
+# -------------------------------------------------------------
+*.stl   binary
+*.3mf   binary
+*.obj   binary
+*.amf   binary
+*.gcode text eol=lf
+
+
+# -------------------------------------------------------------
+#  Images & Renders
+# -------------------------------------------------------------
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.bmp   binary
+*.tiff  binary
+*.tif   binary
+*.svg   text eol=lf
+*.webp  binary
+
+
+# -------------------------------------------------------------
+#  Data & Documentation
+# -------------------------------------------------------------
+*.csv   text eol=lf
+*.tsv   text eol=lf
+*.json  text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.pdf   binary
+
+
+# -------------------------------------------------------------
+#  Git LFS — large binary files stored in LFS
+# -------------------------------------------------------------
+*.step  filter=lfs diff=lfs merge=lfs -text
+*.stp   filter=lfs diff=lfs merge=lfs -text
+*.stl   filter=lfs diff=lfs merge=lfs -text
+*.3mf   filter=lfs diff=lfs merge=lfs -text
+*.obj   filter=lfs diff=lfs merge=lfs -text
+*.png   filter=lfs diff=lfs merge=lfs -text
+*.jpg   filter=lfs diff=lfs merge=lfs -text
+*.jpeg  filter=lfs diff=lfs merge=lfs -text
+*.gif   filter=lfs diff=lfs merge=lfs -text
+*.pdf   filter=lfs diff=lfs merge=lfs -text
+*.raw   filter=lfs diff=lfs merge=lfs -text
+*.zip   filter=lfs diff=lfs merge=lfs -text
