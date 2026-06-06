@@ -1,11 +1,7 @@
 # Watts & Cseh Electronics
 
-Open-source guitar effects pedal designs — circuits, PCBs, enclosures, and
-documentation, version-controlled in one place.
-
-Each product folder holds the full design: the LTspice circuit, the KiCad
-board, the enclosure CAD, the faceplate art, and the docs (BOM, assembly
-notes, datasheets).
+Open-source guitar effects pedal designs; circuits, PCBs, chassis, and
+docs, version-controlled in one place.
 
 ---
 
@@ -29,15 +25,6 @@ notes, datasheets).
 
 ---
 
-## Products
-
-| Product | Status | Description |
-|---|---|---|
-| **Treble Boost** | In progress | — |
-| **Chorus** | In progress | — |
-
----
-
 ## Repository structure
 
 ```
@@ -56,28 +43,5 @@ pedals/
     ├── templates/   BOM template, doc template
     └── 3d-models/   common parts (jacks, pots, switches)
 ```
-
----
-
-## Getting started
-
-This repo uses **Git LFS** for binary assets (STEP, STL, 3MF, renders).
-Install it once before cloning so large files download correctly:
-
-```bash
-git lfs install
-git clone https://github.com/LachlanWT/Watts-Cseh-Electronics.git
-```
-
-KiCad library paths are set **relative** to `_shared/kicad-libs`, so the
-project opens correctly on any machine after cloning.
-
----
-
-## Contributing
-
-- Work on a branch per revision (e.g. `treble-boost-rev-b`), merge to `main`
-  once the revision is validated.
-- Keep `main` buildable.
 - Don't commit auto-generated files (Gerbers, caches, sim outputs) — these are
   handled by `.gitignore`.
